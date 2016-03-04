@@ -1,0 +1,13 @@
+# Unix
+alias dev="cd ~/dev"
+alias ...='../..'
+
+# Todo
+alias todo="$EDITOR ~/Dropbox/Work/todo"
+
+# IP addresses
+alias localip="ipconfig getifaddr en0"
+alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+# Copy my public key to the pasteboard
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'"

@@ -1,0 +1,47 @@
+" Color scheme
+syntax enable
+set t_Co=256
+set background=dark
+colorscheme solarized
+
+set lazyredraw
+set re=1
+set encoding=utf-8
+set scrolloff=3    " Start scrolling three lines before the horizontal window border
+set cursorline     " Highlight current line
+set hlsearch       " Highlight searches [use :noh to clear]
+set mouse=a
+set pastetoggle=<F2>
+
+" Set Syntastic to perform haml
+let g:syntastic_mode_map = {
+    \ "mode": "active",
+    \ "passive_filetypes": ["haml", "scss", "sass"] }
+
+" NerdTree
+" File tree browser - backslash
+map \ :NERDTreeToggle<CR>
+" File tree browser showing current file - pipe (shift-backslash)
+map \| :NERDTreeFind<CR>
+
+" GitGutter, trade speed for accuracy
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
+
+" Copy on OSX
+vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
+nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
+
+" Strip trailing whitespace
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()

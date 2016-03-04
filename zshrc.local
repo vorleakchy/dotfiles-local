@@ -1,0 +1,8 @@
+# Enable 256-color mode when screen is started
+export TERM='xterm-256color'
+
+# Load RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+export PATH="$HOME/.bin:$PATH"
+eval "$(rbenv init - --no-rehash)"

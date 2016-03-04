@@ -1,0 +1,42 @@
+[user]
+  name = Vorleak Chy
+  email = vorleak.chy@gmail.com
+
+[github]
+  user = vorleakchy
+
+[alias]
+  bd = !sh -c 'git branch -D $1 && git push origin :$1' -
+  br = branch
+  clear-local-branches = "!git branch | grep -v "master" | xargs git branch -D"
+  col = "!select choice in $(git branch | grep -v '*'); do echo checking out $choice; git checkout $choice; break; done"
+  com = checkout master
+  cnf = "!git ls-files -u | cut -f 2 | sort -u"
+  details = log -n1 -p --format=fuller
+  dc = diff --cached
+  df = diff
+  l = log -n10 --pretty=colored
+  ll = log --color --graph --pretty=colored-graph
+  mm = !git checkout master && git merge @{-1}
+  pending = !git fetch origin && git log --pretty=colored origin/stable..origin/master
+  pr = !git push -u && hub pull-request
+  ra = !git rebase --abort
+  rc = !git rebase --continue && git status
+  ri = !git fetch origin && git rebase -i origin/master
+  ready = !git fetch origin && git rebase --interactive origin/master && git rebase origin/master --ignore-date && git push -f && git mm && git push
+  su = !git submodule update
+  unwip = !test "`git log -n1 --pretty=format:%s`" = "WIP" && git reset HEAD~1
+  wip = !git add -A && git commit -m "WIP"
+
+[pretty]
+  colored = format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset
+  colored-graph = format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+[diff]
+  tool = vimdiff
+
+[merge]
+  tool = vimdiff
+
+[mergetool "vimdiff"]
+  cmd = vimdiff -f $LOCAL $MERGED $REMOTE

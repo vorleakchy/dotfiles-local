@@ -1,0 +1,2 @@
+EXCLUDES="README.md LICENSE iterm2"
+DOTFILES_DIRS="$HOME/dev/dotfiles $HOME/dev/dotfiles-thoughtbot"

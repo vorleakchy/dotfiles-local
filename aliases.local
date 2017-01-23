@@ -3,7 +3,7 @@ alias dev="cd ~/dev"
 alias ...='../..'
 
 # Todo
-alias todo="$EDITOR ~/Dropbox/Work/todo"
+alias todo="$EDITOR ~/Dropbox/Work/todo.md"
 
 # IP addresses
 alias localip="ipconfig getifaddr en0"

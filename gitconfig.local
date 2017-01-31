@@ -12,7 +12,6 @@
   col = "!select choice in $(git branch | grep -v '*'); do echo checking out $choice; git checkout $choice; break; done"
   com = checkout master
   cnf = "!git ls-files -u | cut -f 2 | sort -u"
-  details = log -n1 -p --format=fuller
   dc = diff --cached
   df = diff
   l = log -n10 --pretty=colored
@@ -20,9 +19,9 @@
   mm = !git checkout master && git merge @{-1}
   pending = !git fetch origin && git log --pretty=colored origin/stable..origin/master
   pr = !git push -u && hub pull-request
-  ra = !git rebase --abort
-  rc = !git rebase --continue && git status
-  ri = !git fetch origin && git rebase -i origin/master
+  rb = !git fetch && git rebase
+  rba = !git rebase --abort
+  rbc = !git rebase --continue && git status
   ready = !git fetch origin && git rebase --interactive origin/master && git rebase origin/master --ignore-date && git push -f && git mm && git push
   su = !git submodule update
   unwip = !test "`git log -n1 --pretty=format:%s`" = "WIP" && git reset HEAD~1
@@ -30,7 +29,7 @@
 
 [pretty]
   colored = format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset
-  colored-graph = format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  colored-graph = format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 
 [diff]
   tool = vimdiff

@@ -18,7 +18,6 @@
   ll = log --color --graph --pretty=colored-graph
   mm = !git checkout master && git merge @{-1}
   pending = !git fetch origin && git log --pretty=colored origin/stable..origin/master
-  pr = !git push -u && hub pull-request
   rb = !git fetch && git rebase
   rba = !git rebase --abort
   rbc = !git rebase --continue && git status

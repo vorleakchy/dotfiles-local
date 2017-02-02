@@ -11,3 +11,28 @@ bind -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
 bind-key - split-window -v  -c '#{pane_current_path}'
 bind-key \ split-window -h  -c '#{pane_current_path}'
 bind c new-window -c '#{pane_current_path}'
+
+# Resize panes
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 5
+bind -r L resize-pane -R 5
+
+# Easy reloading of the tmux.conf configuration file
+bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
+
+# Mouse
+set -g mouse on
+
+# Simplify status bar display.
+set -g status-left-length 40
+set -g status-fg black
+set -g status-bg green
+set -g status-left '[#S] '
+# `is-online` see: https://github.com/sindresorhus/is-online-cli
+set -g status-right "#{?pane_synchronized,--SYNCED--,} #(is-online) #(battery -t -g black)  #(date '+%a, %b %d - %I:%M') "
+
+# Kill current session and go to next session
+bind-key K run-shell 'tmux switch-client -n \; kill-session -t "$(tmux display-message -p "#S")" || tmux kill-session'
+
+

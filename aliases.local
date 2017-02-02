@@ -1,4 +1,6 @@
 # Unix
+alias x='exit'
+alias q='exit'
 alias dev="cd ~/dev"
 alias ...='../..'
 

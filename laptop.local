@@ -1,0 +1,25 @@
+#!/bin/sh
+
+fancy_echo "Upgrading Homebrew formulae ..."
+brew upgrade
+
+brew bundle --file=- <<EOF
+brew "shellcheck"
+brew "ngrok"
+brew "watch"
+
+tap "Goles/battery"
+brew "battery"
+EOF
+
+fancy_echo "Installing npm package ..."
+npm install --global is-online-cli
+
+fancy_echo "Cleaning up old Homebrew formulae ..."
+brew cleanup
+brew cask cleanup
+
+if [ -r "$HOME/.rcrc" ]; then
+  fancy_echo "Updating dotfiles ..."
+  rcup
+fi

@@ -4,9 +4,19 @@ fancy_echo "Upgrading Homebrew formulae ..."
 brew upgrade
 
 brew bundle --file=- <<EOF
+brew "neovim/neovim/neovim"
+brew "macvim"
+brew "tree"
+brew "wget"
+brew "htop"
 brew "shellcheck"
 brew "ngrok"
 brew "watch"
+brew "m-cli"
+brew "mas"
+
+tap "thoughtbot/formulae"
+brew "gitsh"
 
 tap "Goles/battery"
 brew "battery"

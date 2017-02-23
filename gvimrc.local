@@ -1,0 +1,4 @@
+set guifont=Source\ Code\ Pro\ for\ Powerline:h16
+set antialias
+set background=light
+set go-=m go-=T go-=l go-=L go-=r go-=R go-=b go-=F

@@ -5,6 +5,7 @@ brew upgrade
 
 brew bundle --file=- <<EOF
 brew "neovim/neovim/neovim"
+brew "python3"
 brew "macvim"
 brew "tree"
 brew "wget"

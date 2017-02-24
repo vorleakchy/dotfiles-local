@@ -79,6 +79,29 @@ map \| :NERDTreeFind<CR>
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 
+" === deoplete ===
+if has("nvim")
+  let g:deoplete#enable_at_startup = 1
+  let g:deoplete#auto_complete_start_length = 1
+end
+
+" Override thoughtbot completion direction
+inoremap <S-Tab> <C-P>
+
+function! s:check_back_space()
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1] !~ '\k'
+endfunction
+
+" Override thoughtbot tab wrapper to move in opposite direction
+function! InsertTabWrapper()
+  if s:check_back_space()
+    return "\<Tab>"
+  else
+    return "\<C-n>"
+  endif
+endfunction
+
 " vim-airline
 let g:airline_powerline_fonts = 1
 

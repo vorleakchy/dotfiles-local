@@ -105,5 +105,8 @@ endfunction
 " vim-airline
 let g:airline_powerline_fonts = 1
 
+" === vim-markdown ===
+let g:markdown_fenced_languages = ['html', 'ruby', 'bash=sh', 'javascript', 'css', 'sql', 'vim']
+
 " === vim-marked ===
 let g:marked_app = 'Markoff' " Use thoughtbot's Markoff for markdown previews on MacOS

@@ -10,7 +10,7 @@ set encoding=utf-8
 set scrolloff=3    " Start scrolling three lines before the horizontal window border
 set cursorline     " Highlight current line
 set mouse=a
-" set pastetoggle=<F2>
+set clipboard=unnamed " copy paste to clipboard
 
 " Searching
 set hlsearch       " Highlight searches [use :noh to clear]
@@ -108,20 +108,3 @@ let g:airline_powerline_fonts = 1
 " === vim-marked ===
 let g:marked_app = 'Markoff' " Use thoughtbot's Markoff for markdown previews on MacOS
 
-" Copy on OSX
-" vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
-" nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
-
-" Strip trailing whitespace
-" function! <SID>StripTrailingWhitespaces()
-"     " Preparation: save last search, and cursor position.
-"     let _s=@/
-"     let l = line(".")
-"     let c = col(".")
-"     " Do the business:
-"     %s/\s\+$//e
-"     " Clean up: restore previous search history, and cursor position
-"     let @/=_s
-"     call cursor(l, c)
-" endfunction
-" autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()

@@ -55,9 +55,6 @@ bind -n C-Up resize-pane -U 5
 # Easy reloading of the tmux.conf configuration file
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
 
-# Run rcup in side pane
-bind r split-window -h -c ~/ "rcup"
-
 # Show gitsh in side pane
 bind g split-window -c "#{pane_current_path}" -h -p 50 'gitsh'
 
@@ -73,8 +70,3 @@ bind-key C-b send-keys 'tat && exit' 'C-m'
 # Kill current session and go to next session
 bind-key ! run-shell 'tmux switch-client -n \; kill-session -t "$(tmux display-message -p "#S")" || tmux kill-session'
 
-
-# Secondary binding for C-l to retain redraw
-# bind C-l send-keys 'C-l'
-
-# bind-key J command-prompt -p "join pane from: "  "join-pane -h -s '%%'"

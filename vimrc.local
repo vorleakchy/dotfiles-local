@@ -107,9 +107,3 @@ let g:airline_powerline_fonts = 1
 
 " === vim-marked ===
 let g:marked_app = 'Markoff' " Use thoughtbot's Markoff for markdown previews on MacOS
-
-" Hack to get C-h working in neovim
-if has('nvim')
-  nmap <BS> <C-W>h
-  tnoremap <Esc> <C-\><C-n>
-endif

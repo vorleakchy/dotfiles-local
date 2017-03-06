@@ -110,3 +110,10 @@ let g:markdown_fenced_languages = ['html', 'ruby', 'bash=sh', 'javascript', 'css
 
 " === vim-marked ===
 let g:marked_app = 'Markoff' " Use thoughtbot's Markoff for markdown previews on MacOS
+
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
+" zoom a vim pane, <C-w>= to re-balance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>

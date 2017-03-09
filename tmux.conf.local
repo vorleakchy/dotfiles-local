@@ -4,6 +4,9 @@ set -g mouse on
 # Address vim mode switching delay (http://superuser.com/a/252717/65504)
 set -s escape-time 0
 
+# Address clipboard failure in tmux + vim
+set -g default-command "reattach-to-user-namespace -l ${SHELL}"
+
 # See: https://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future
 # Use vim keybindings in copy mode
 setw -g mode-keys vi
@@ -21,7 +24,7 @@ set -g status-bg default
 set -g status-attr bright
 set-window-option -g window-status-current-bg default
 set-window-option -g window-status-current-fg colour166
-# # `is-online` see: https://github.com/sindresorhus/is-online-cli
+# `is-online` see: https://github.com/sindresorhus/is-online-cli
 # More useful status-right with online status, battery percentage and nicely formated datetime
 set -g status-right "#{?pane_synchronized,--SYNCED--,} #(is-online) #(battery -p -t -g default)  #(date '+%a, %b %d - %I:%M') "
 

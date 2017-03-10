@@ -9,6 +9,7 @@ tap "thoughtbot/formulae"
 
 brew "goles/battery/battery"
 brew "chrome-cli"
+brew "elixir"
 brew "thoughtbot/formulae/gitsh"
 brew "graphviz"
 brew "htop"

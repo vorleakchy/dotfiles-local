@@ -1,14 +1,30 @@
-Plug 'scrooloose/nerdtree'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Colors
 Plug 'altercation/vim-colors-solarized'
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-haml'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'itspriddle/vim-marked'
 
+" Navigations
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'scrooloose/nerdtree'
+
+" Completion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" Git
+Plug 'junegunn/gv.vim'
+Plug 'airblade/vim-gitgutter'
+
+" Languages
+Plug 'itspriddle/vim-marked'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-haml'
+
+" Linting
+Plug 'w0rp/ale'
+
+" Searches
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/gv.vim'
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Others
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+

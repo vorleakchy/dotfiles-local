@@ -51,8 +51,10 @@ What's in it?
 
 Credits
 -------
-Most of my configuration is small changes on top of thoughtbot's dotfiles.
-They have a great series of blog posts about dotfile configuration at their
-[blog](http://robots.thoughtbot.com).
+[Thoughtbot](http://thoughtbot.com).
+
+[Chris Toomey](https://github.com/christoomey)
+
+[Geoff Harcourt](https://github.com/geoffharcourt)
 
 This software is free and distributable under the MIT license.

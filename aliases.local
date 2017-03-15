@@ -6,6 +6,9 @@ alias ...='../..'
 # Todo
 alias todo="$EDITOR ~/Dropbox/Work/todo.md"
 
+# Reload ZSH
+alias z=". ~/.zshrc | printf '=> Reload ZSH.\n'"
+
 # IP addresses
 alias localip="ipconfig getifaddr en0"
 alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"

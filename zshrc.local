@@ -3,6 +3,7 @@ export TERM='xterm-256color'
 
 # Editor
 export VISUAL=nvim
+export EDITOR=$VISUAL
 
 # Load RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"

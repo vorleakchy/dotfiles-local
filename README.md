@@ -42,12 +42,16 @@ What's in it?
 
 [zsh](http://zsh.sourceforge.net/FAQ/zshfaq01.html) configuration and aliases:
 
-* `dev` to go to my `dev` folder
-* `...` to go to two upper levels of folder
+* `q` to exit.
+* `dev` to go to my `dev` folder.
+* `...` to go to two upper levels of folder.
 * `todo` to edit my plain text todo file, located in Dropbox.
+* `z` to reload ZSH.
+* `gsh` to run `gitsh`
 * `localip` to see my local IP address.
 * `pubip` to see my public IP address.
 * `pubkey` to copy my public key to the pasteboard.
+* `rc` to run `rails console`
 
 Credits
 -------

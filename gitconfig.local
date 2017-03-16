@@ -13,8 +13,8 @@
   clear-local-branches = "!git branch | grep -v "master" | xargs git branch -D"
   com = checkout master
   cnf = "!git ls-files -u | cut -f 2 | sort -u"
-  df = "!f() { [ \"$GIT_PREFIX\" != \"\" ] && cd "$GIT_PREFIX"; git diff --color $@ | diff-so-fancy | less --tabs=4 -RFX; }; f"
-  dc = "!f() { [ \"$GIT_PREFIX\" != \"\" ] && cd "$GIT_PREFIX"; git diff --color --cached $@ | diff-so-fancy | less --tabs=4 -RFX; }; f"
+  df = "!git diff"
+  dc = "!git diff --cached"
   l = log -n10 --pretty=colored
   ll = log --color --graph --pretty=colored-graph
   mm = !git checkout master && git merge @{-1}
@@ -43,3 +43,7 @@
 
 [mergetool "vimdiff"]
   cmd = vimdiff -f $LOCAL $MERGED $REMOTE
+
+[core]
+  pager = diff-so-fancy | less --tabs=1,5 -RFX
+  show = diff-so-fancy | less --tabs=1,5 -RFX

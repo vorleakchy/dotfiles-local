@@ -9,6 +9,9 @@ alias todo="$EDITOR ~/Dropbox/Work/todo.md"
 # Reload ZSH
 alias z=". ~/.zshrc | printf '=> Reload ZSH.\n'"
 
+# Dev Tools
+alias gsh="gitsh"
+
 # IP addresses
 alias localip="ipconfig getifaddr en0"
 alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -22,3 +25,4 @@ alias rc='rails console'
 # Folder navigation
 alias dotf='cd $HOME/dev/dotfiles'
 alias dotu='cd $HOME/dev/thoughtbot-dotfiles'
+alias tlayouts='cd ~/Dropbox/Work/tmuxifier-layouts/'

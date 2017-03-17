@@ -25,6 +25,7 @@
   rba = !git rebase --abort
   rbc = !git rebase --continue && git status
   ready = !git fetch origin && git rebase --interactive origin/master && git rebase origin/master --ignore-date && git push -f && git mm && git push
+  si = !git submodule init
   su = !git submodule update
   uncommit = reset --soft HEAD^
   unstage = reset

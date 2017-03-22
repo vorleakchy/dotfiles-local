@@ -11,7 +11,7 @@ alias z=". ~/.zshrc | printf '=> Reload ZSH.\n'"
 
 # Dev Tools
 alias gsh="gitsh"
-alias tls="tmuxifier load-session"
+alias mux="tmuxifier load-session"
 
 # IP addresses
 alias localip="ipconfig getifaddr en0"

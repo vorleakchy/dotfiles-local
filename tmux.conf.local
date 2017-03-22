@@ -45,6 +45,9 @@ bind-key - split-window -v  -c '#{pane_current_path}'
 bind-key \ split-window -h  -c '#{pane_current_path}'
 bind c new-window -c '#{pane_current_path}'
 
+# Edit dotfile in side pane
+bind C-d split-window -h -c ~/dev/dotfiles/ "reattach-to-user-namespace $EDITOR +Files"
+
 # Smart pane switching with awareness of vim splits
 # See: https://github.com/christoomey/vim-tmux-navigator
 is_vim='echo "#{pane_current_command}" | grep -iqE "(^|\/)g?(view|n?vim?x?)(diff)?$"'

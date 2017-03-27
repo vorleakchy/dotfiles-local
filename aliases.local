@@ -11,6 +11,7 @@ alias z=". ~/.zshrc | printf '=> Reload ZSH.\n'"
 
 # Dev Tools
 alias gsh="gitsh"
+alias ru="rubocop"
 alias mux="tmuxifier load-session"
 
 # IP addresses
@@ -21,7 +22,9 @@ alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'"
 
 # Rails
+alias r='rails'
 alias rc='rails console'
+alias rs='rails server'
 alias taild='tail -f log/development.log'
 alias tailt='tail -f log/test.log'
 

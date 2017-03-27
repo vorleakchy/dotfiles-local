@@ -13,9 +13,8 @@ Plug 'junegunn/gv.vim'
 Plug 'airblade/vim-gitgutter'
 
 " Languages
+Plug 'sheerun/vim-polyglot'
 Plug 'itspriddle/vim-marked'
-Plug 'tpope/vim-markdown'
-Plug 'tpope/vim-haml'
 
 " Linting
 Plug 'w0rp/ale'

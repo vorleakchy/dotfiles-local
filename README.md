@@ -22,7 +22,7 @@ Install
 
 Clone onto my laptop:
 
-    git clone git://github.com/vorleakchy/dotfiles.git
+    git clone git://github.com/vorleakchy/dotfiles-local.git
 
 Install:
 

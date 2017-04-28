@@ -29,6 +29,6 @@ alias taild='tail -f log/development.log'
 alias tailt='tail -f log/test.log'
 
 # Folder navigation
-alias dotf='cd $HOME/dev/dotfiles'
-alias dotu='cd $HOME/dev/thoughtbot-dotfiles'
+alias dotl='cd $HOME/dev/dotfiles-local'
+alias dott='cd $HOME/dev/dotfiles'
 alias tlayouts='cd ~/Dropbox/Work/tmuxifier-layouts/'

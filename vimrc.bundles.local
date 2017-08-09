@@ -16,9 +16,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
 Plug 'itspriddle/vim-marked'
 
-" Linting
-Plug 'w0rp/ale'
-
 " Searches
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'

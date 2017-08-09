@@ -1,5 +1,5 @@
 " File tree browser - backslash
-map \ :NERDTreeToggle<CR>
+map - :NERDTreeToggle<CR>
 " File tree browser showing current file - pipe (shift-backslash)
-map \| :NERDTreeFind<CR>
+map _ :NERDTreeFind<CR>
 

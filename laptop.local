@@ -25,7 +25,6 @@ brew "shellcheck"
 brew "tree"
 brew "wget"
 brew "watch"
-brew "yarn"
 brew "youtube-dl"
 
 cask "alfred"

@@ -28,6 +28,11 @@ alias rs='rails server'
 alias taild='tail -f log/development.log'
 alias tailt='tail -f log/test.log'
 
+# Postgres
+alias pgstart='brew services start postgresql'
+alias pgstop='brew services stop postgresql && rm -f /usr/local/var/postgres/postmaster.pid'
+alias pgrestart='pgstop && pgstart'
+
 # Folder navigation
 alias dotf='cd $HOME/dev/dotfiles-local'
 alias dotu='cd $HOME/dev/dotfiles'

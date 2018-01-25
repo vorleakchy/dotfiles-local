@@ -19,6 +19,7 @@ nnoremap <leader>gc :Files app/controllers/<cr>
 nnoremap <leader>gy :Files app/assets/stylesheets/<cr>
 nnoremap <leader>gj :Files app/assets/javascripts/<cr>
 nnoremap <leader>gs :Files spec/<cr>
+nnoremap <leader>gb :Buffers<cr>
 
 function! s:all_help_files()
   return join(map(split(&runtimepath, ','), 'v:val ."\/doc\/tags"'), ' ')

@@ -10,3 +10,8 @@ vnoremap <C-@> <Esc>gV
 onoremap <C-@> <Esc>
 cnoremap <C-@> <C-c>
 inoremap <C-@> <Esc>`^
+
+" Mappings for quick search & replace.
+" Do a / search first, then leave pattern empty in :s// to use last
+map <Leader>sra :%s///g<Left><Left>
+map <Leader>src :%s///gc<Left><Left><Left>

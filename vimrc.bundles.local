@@ -26,3 +26,8 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Unplug thoughtbot's bundles
 UnPlug 'ctrlp.vim'
+UnPlug 'vim-elixir'
+UnPlug 'vim-coffee-script'
+UnPlug 'vim-javascript'
+UnPlug 'vim-slim'
+UnPlug 'vim-ruby'

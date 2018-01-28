@@ -46,7 +46,6 @@ bind-key s display-panes\; command-prompt -p "pane #: "  "swap-pane -t '%%'"
 # More intuitive pane splitting key-bindings, open all in current path
 bind-key - split-window -v  -c '#{pane_current_path}'
 bind-key \ split-window -h  -c '#{pane_current_path}'
-bind c new-window -c '#{pane_current_path}'
 
 # Edit dotfiles-local in side pane
 bind C-d split-window -h -c ~/dev/dotfiles-local/ "reattach-to-user-namespace $EDITOR +Files"
@@ -65,14 +64,14 @@ bind -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
 bind C-l send-keys 'C-l'
 
 # Easy resizing of panes with fine and coarse adjustment
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 5
+bind -r L resize-pane -R 5
 bind -n S-Left resize-pane -L 2
 bind -n S-Right resize-pane -R 2
 bind -n S-Down resize-pane -D 1
-bind -n S-Up resize-pane -U 1
-bind -n C-Left resize-pane -L 10
-bind -n C-Right resize-pane -R 10
-bind -n C-Down resize-pane -D 5
-bind -n C-Up resize-pane -U 5
+bind -n S-Up resize-pane -U 2
 
 # Easy reloading of the tmux.conf configuration file
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"

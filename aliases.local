@@ -2,7 +2,6 @@
 alias q='exit'
 alias dev="cd ~/dev"
 alias ...='../..'
-alias c='clear'
 
 # Todo
 alias todo="$EDITOR ~/Dropbox/Work/todo.md"

@@ -6,10 +6,8 @@
   user = vorleakchy
 
 [alias]
-  bd = !sh -c 'git branch -D $1 && git push origin :$1' -
-  bl = "!git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) | %(authorname) | (%(color:green)%(committerdate:relative)%(color:reset))| %(contents:subject) ' | column -t -s '|'"
-  br = branch
-  bselect = !git branch | grep -v '^*' | fzf-tmux --reverse | xargs git checkout
+  bl = for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(authordate:short) %(color:red)%(objectname:short) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) - (%(color:green)%(committerdate:relative)%(color:reset))'
+  bs = !git branch | grep -v '^*' | fzf-tmux --reverse | xargs git checkout
   clear-local-branches = "!git branch | grep -v "master" | xargs git branch -D"
   com = checkout master
   cnf = "!git ls-files -u | cut -f 2 | sort -u"

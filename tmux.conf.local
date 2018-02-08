@@ -73,8 +73,11 @@ bind -n S-Right resize-pane -R 2
 bind -n S-Down resize-pane -D 1
 bind -n S-Up resize-pane -U 2
 
-# Easy reloading of the tmux.conf configuration file
-bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
+# Reload tmux.conf with prefix-r
+bind C-r source-file ~/.tmux.conf \; display "Reloaded ~/.tmux.conf"
+
+# Run rcup
+bind r split-window -h -c ~/ "rcup"
 
 # Show gitsh in side pane
 bind g split-window -c "#{pane_current_path}" -h -p 50 'gitsh'

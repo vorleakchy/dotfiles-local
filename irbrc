@@ -1,14 +1,13 @@
 require 'rubygems'
 require 'pp'
 require 'irb/completion'
+require 'irb/ext/save-history'
 
 def pbcopy(data)
   File.popen('pbcopy', 'w') { |p| p << data.to_s }
   $?.success?
 end
 
-# Stolen from Chris Toomey's dotfiles:
-# http://github.com/christoomey/dotfiles
 ANSI = {}
 ANSI[:RESET]     = "\e[0m"
 ANSI[:BOLD]      = "\e[1m"
@@ -50,6 +49,19 @@ extend_console 'interactive_editor'
 
 # Awesome print for pretty colorful indented object printing
 extend_console 'awesome_print'
+
+IRB.conf[:USE_READLINE] = true
+IRB.conf[:SAVE_HISTORY] = 1000
+IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
+IRB.conf[:AUTO_INDENT]  = true
+IRB.conf[:PROMPT][:CUSTOM] = {
+  :PROMPT_I => ">> ",
+  :PROMPT_S => "%l>> ",
+  :PROMPT_C => ".. ",
+  :PROMPT_N => ".. ",
+  :RETURN => "=> %s\n"
+}
+IRB.conf[:PROMPT_MODE] = :CUSTOM
 
 # Just for Rails...
 if defined? Rails

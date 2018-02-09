@@ -37,6 +37,9 @@ bind C-j split-window -v "tmux list-sessions | sed -E 's/:.*$//' | grep -v \"^$(
 # Join pane from another window
 bind-key J command-prompt -p "join pane from: "  "join-pane -h -s '%%'"
 
+# Go to last window
+bind-key / last-window
+
 # Quick session switching back and forth. Default mapping for Space
 bind-key Space switch-client -l
 

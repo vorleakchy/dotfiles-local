@@ -15,3 +15,6 @@ inoremap <C-@> <Esc>`^
 " Do a / search first, then leave pattern empty in :s// to use last
 map <Leader>sra :%s///g<Left><Left>
 map <Leader>src :%s///gc<Left><Left><Left>
+
+" Grep the word under the cursor
+nnoremap gr :Ag<SPACE>'\b<cword>\b' *<CR>

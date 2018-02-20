@@ -17,3 +17,6 @@ set clipboard=unnamed " Copy paste to clipboard
 set hlsearch          " Highlight searches [use :noh to clear]
 set ignorecase        " Searches are case insensitive
 set smartcase         " Searches are case-sensitive if a capital is in term
+
+" Highlight VCS conflict markers
+match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'

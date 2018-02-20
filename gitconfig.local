@@ -10,6 +10,7 @@
   bs = !git branch | grep -v '^*' | fzf-tmux --reverse | xargs git checkout
   clear-local-branches = "!git branch | grep -v "master" | xargs git branch -D"
   com = checkout master
+  conflicted = !vim +Conflicted
   cnf = "!git ls-files -u | cut -f 2 | sort -u"
   df = "!git diff"
   dc = "!git diff --cached"

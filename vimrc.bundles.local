@@ -12,6 +12,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'junegunn/gv.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tommcdo/vim-fubitive'
+Plug 'christoomey/vim-conflicted'
 
 " Languages
 Plug 'sheerun/vim-polyglot'

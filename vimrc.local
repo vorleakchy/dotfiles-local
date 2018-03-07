@@ -18,5 +18,7 @@ set hlsearch          " Highlight searches [use :noh to clear]
 set ignorecase        " Searches are case insensitive
 set smartcase         " Searches are case-sensitive if a capital is in term
 
+set autoread          " Automatically read file if it has been changed outside of vim
+
 " Highlight VCS conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'

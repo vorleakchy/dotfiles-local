@@ -26,6 +26,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'milkypostman/vim-togglelist'
+Plug 'kopischke/vim-fetch'
 
 " Unplug thoughtbot's bundles
 UnPlug 'ctrlp.vim'

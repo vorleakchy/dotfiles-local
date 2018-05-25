@@ -28,6 +28,8 @@
   su = !git submodule update
   stu = !git stash -u
   stp = !git stash pop
+  standup = shortlog --since=yesterday
+  today = shortlog --since=midnight
   uncommit = reset --soft HEAD^
   unstage = reset
   unwip = !test "`git log -n1 --pretty=format:%s`" = "WIP" && git reset HEAD~1

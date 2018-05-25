@@ -15,7 +15,7 @@
   df = "!git diff"
   dc = "!git diff --cached"
   l = log -n10 --pretty=colored
-  ll = log --color --graph --pretty=colored-graph
+  ll = log --oneline --decorate --graph --all --pretty=colored-graph
   mm = !git checkout master && git merge @{-1}
   pending = !git fetch origin && git log --pretty=colored origin/production..origin/master
   pl = pull

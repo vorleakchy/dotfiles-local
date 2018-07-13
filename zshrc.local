@@ -16,3 +16,5 @@ export TMUXIFIER_LAYOUT_PATH="$HOME/Dropbox/Work/tmuxifier-layouts"
 # asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+export PATH="$HOME/.bin:$PATH"

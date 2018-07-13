@@ -7,6 +7,7 @@ brew bundle --file=- <<EOF
 tap "Goles/battery"
 tap "thoughtbot/formulae"
 
+brew "awsebcli"
 brew "goles/battery/battery"
 brew "chrome-cli"
 brew "elasticsearch"

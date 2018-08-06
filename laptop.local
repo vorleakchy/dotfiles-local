@@ -17,7 +17,6 @@ brew "htop"
 brew "m-cli"
 brew "mas"
 brew "mycli"
-brew "ngrok"
 brew "neovim/neovim/neovim"
 brew "python3"
 brew "pgcli"
@@ -48,6 +47,7 @@ EOF
 
 fancy_echo "Installing npm package ..."
 npm install --global is-online-cli
+npm i -g ngrok
 
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup

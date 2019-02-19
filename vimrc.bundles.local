@@ -7,7 +7,6 @@ Plug 'scrooloose/nerdtree'
 
 " Completion
 Plug 'https://github.com/andymass/vim-matchup'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Git
 Plug 'junegunn/gv.vim'

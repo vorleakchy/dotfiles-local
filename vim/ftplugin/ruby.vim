@@ -1,2 +1,2 @@
-" Require pry
-nnoremap <leader>bp orequire "pry"; binding.pry<esc>
+" Require byebug
+nnoremap <leader>bb obyebug<esc>

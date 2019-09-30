@@ -30,7 +30,7 @@ alias bu='bundle update'
 alias r='rails'
 alias rc='rails console'
 alias rs='rails server'
-alias rr='rake routes | fzf-tmux --reverse'
+alias rr='rails routes | fzf-tmux --reverse'
 alias taild='tail -f log/development.log'
 alias tailt='tail -f log/test.log'
 

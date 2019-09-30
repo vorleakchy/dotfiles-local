@@ -19,10 +19,6 @@ Plug 'christoomey/vim-conflicted'
 Plug 'sheerun/vim-polyglot'
 Plug 'itspriddle/vim-marked'
 
-" Searches
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
 " Others
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -31,9 +27,7 @@ Plug 'kopischke/vim-fetch'
 Plug 'christoomey/vim-tmux-runner'
 
 " Unplug thoughtbot's bundles
-UnPlug 'ctrlp.vim'
-UnPlug 'vim-elixir'
-UnPlug 'vim-coffee-script'
-UnPlug 'vim-javascript'
-UnPlug 'vim-slim'
-UnPlug 'vim-ruby'
+UnPlug 'elixir-lang/vim-elixir'
+UnPlug 'pangloss/vim-javascript'
+UnPlug 'slim-template/vim-slim'
+UnPlug 'vim-ruby/vim-ruby'

@@ -1,8 +1,6 @@
 let g:fzf_files_options =
   \ '--reverse ' .
   \ '--preview "(coderay {} || cat {}) 2> /dev/null | head -'.&lines.'"'
-nnoremap <C-p> :Files<cr>
-let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden'
 
 let branch_files_options = { 'source': '( git status --porcelain | awk ''{print $2}''; git diff --name-only HEAD $(git merge-base HEAD master) ) | sort | uniq'}
 let branch_files_options_develop = { 'source': '( git status --porcelain | awk ''{print $2}''; git diff --name-only HEAD $(git merge-base HEAD develop) ) | sort | uniq'}

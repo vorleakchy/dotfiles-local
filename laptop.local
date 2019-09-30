@@ -17,6 +17,7 @@ brew "htop"
 brew "m-cli"
 brew "mas"
 brew "mycli"
+brew "httpie"
 brew "neovim/neovim/neovim"
 brew "python3"
 brew "pgcli"
@@ -46,8 +47,9 @@ cask "yakyak"
 EOF
 
 fancy_echo "Installing npm package ..."
-npm install --global is-online-cli
+npm i -g is-online-cli
 npm i -g ngrok
+npm i -g typescript
 
 fancy_echo "Cleaning up old Homebrew formulae ..."
 brew cleanup

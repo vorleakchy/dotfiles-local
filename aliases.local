@@ -40,6 +40,6 @@ alias pgstop='brew services stop postgresql && rm -f /usr/local/var/postgres/pos
 alias pgrestart='pgstop && pgstart'
 
 # Folder navigation
-alias dotf='cd $HOME/dev/dotfiles-local'
-alias dotu='cd $HOME/dev/dotfiles'
+alias dotf='cd $HOME/dotfiles-local'
+alias dotu='cd $HOME/dotfiles'
 alias tlayouts='cd ~/Dropbox/Work/tmuxifier-layouts/'

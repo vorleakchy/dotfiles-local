@@ -26,7 +26,7 @@ Clone onto my laptop:
 
 Install:
 
-    env RCRC=$HOME/dev/dotfiles/rcrc rcup
+    env RCRC=$HOME/dotfiles/rcrc rcup
 
 This will create symlinks for config files in my home directory.
 

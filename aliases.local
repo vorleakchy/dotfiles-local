@@ -39,6 +39,9 @@ alias pgstart='brew services start postgresql'
 alias pgstop='brew services stop postgresql && rm -f /usr/local/var/postgres/postmaster.pid'
 alias pgrestart='pgstop && pgstart'
 
+# Utility stuff
+alias timestamp='date +%Y%m%d%H%M%S'
+
 # Folder navigation
 alias dotf='cd $HOME/dotfiles-local'
 alias dotu='cd $HOME/dotfiles'

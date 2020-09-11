@@ -4,14 +4,12 @@ fancy_echo "Upgrading Homebrew formulae ..."
 brew upgrade
 
 brew bundle --file=- <<EOF
-tap "thoughtbot/formulae"
 
 brew "awsebcli"
 brew "chrome-cli"
 brew "diff-so-fancy"
 brew "elasticsearch"
 brew "fzf"
-brew "thoughtbot/formulae/gitsh"
 brew "graphviz"
 brew "htop"
 brew "m-cli"

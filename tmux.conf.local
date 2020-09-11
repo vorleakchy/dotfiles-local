@@ -81,9 +81,6 @@ bind C-r source-file ~/.tmux.conf \; display "Reloaded ~/.tmux.conf"
 # Run rcup
 bind r split-window -h -c ~/ "rcup"
 
-# Show gitsh in side pane
-bind g split-window -c "#{pane_current_path}" -h -p 50 'gitsh'
-
 # Quickly view system & process info in htop
 bind-key h split-window -h "htop"
 

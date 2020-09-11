@@ -10,7 +10,6 @@ alias todo='$EDITOR ~/Dropbox/Work/todo.md'
 alias z=". ~/.zshrc | printf '=> Reload ZSH.\n'"
 
 # Dev Tools
-alias gsh='gitsh'
 alias ru='rubocop'
 alias mux='tmuxifier load-session'
 alias tl='tmux list-sessions'

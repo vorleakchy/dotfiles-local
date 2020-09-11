@@ -47,7 +47,6 @@ What's in it?
 * `...` to go to two upper levels of folder.
 * `todo` to edit my plain text todo file, located in Dropbox.
 * `z` to reload ZSH.
-* `gsh` to run `gitsh`
 * `localip` to see my local IP address.
 * `pubip` to see my public IP address.
 * `pubkey` to copy my public key to the pasteboard.

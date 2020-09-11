@@ -27,9 +27,8 @@ set -g status-bg default
 set -g status-attr bright
 set-window-option -g window-status-current-bg default
 set-window-option -g window-status-current-fg colour166
-# `is-online` see: https://github.com/sindresorhus/is-online-cli
-# More useful status-right with online status, battery percentage and nicely formated datetime
-set -g status-right "#{?pane_synchronized,--SYNCED--,} #(is-online)  #(date '+%a, %b %d - %I:%M') "
+# More useful status-right with online status and nicely formated datetime
+set -g status-right "#{?pane_synchronized,--SYNCED--,}  #(date '+%a, %b %d - %I:%M') "
 
 # Make C-j display a selectable list of sessions
 bind C-j split-window -v "tmux list-sessions | sed -E 's/:.*$//' | grep -v \"^$(tmux display-message -p '#S')\$\" | fzf --reverse | xargs tmux switch-client -t"

@@ -4,11 +4,9 @@ fancy_echo "Upgrading Homebrew formulae ..."
 brew upgrade
 
 brew bundle --file=- <<EOF
-tap "Goles/battery"
 tap "thoughtbot/formulae"
 
 brew "awsebcli"
-brew "goles/battery/battery"
 brew "chrome-cli"
 brew "diff-so-fancy"
 brew "elasticsearch"
@@ -42,7 +40,6 @@ cask "vlc"
 EOF
 
 fancy_echo "Installing npm package ..."
-npm i -g is-online-cli
 npm i -g ngrok
 npm i -g typescript
 

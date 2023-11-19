@@ -45,3 +45,11 @@ alias timestamp='date +%Y%m%d%H%M%S'
 alias dotf='cd $HOME/dotfiles-local'
 alias dotu='cd $HOME/dotfiles'
 alias tlayouts='cd ~/Dropbox/Work/tmuxifier-layouts/'
+
+# Terraform
+alias tf='terraform'
+
+# Kubernetes
+alias kx='kubectx'
+alias kp='kubectl get po'
+# alias kuc='kubectl exec --stdin --tty $1 -- bash'
